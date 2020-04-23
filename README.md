@@ -58,6 +58,8 @@ Persons of interest may email each other more frequently then others not involve
 
 Reading through the dictionary keys I found one entry that doesn’t look like a name.  I removed ‘THE TRAVEL AGENCY IN THE PARK’ from this list of keys.   Plotting Bonus vs Salary, we see one outlier in the upper right corner.  Running some code to loop through these 2 features reveals that the name corresponding to this point is ‘TOTAL’.  There’s no sense in keeping this point for totals in the data set. 
 
+![outliers_1](C:/users/maxgs/MachineLearning/outliers_1.png)
+
 Bonus vs. Salary before removing outlier. 
  
  
