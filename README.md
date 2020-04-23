@@ -37,11 +37,19 @@ The following are saved, pickled files for the original modified dataset, classi
 # Features
  
 Each key-value pair in the dictionary corresponds to one person.  The key is the name, while the values are features that can be analyzed via machine learning algorithms.  There is a total of 146 people in this set, 18 of which are designated as POI’s.  There are 21 features for each person, they can be categorized as follows: 
-financial features: ['salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'restricted_stock_deferred', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees'] (all units are in US dollars) 
+
+**financial features:**
+
+['salary', 'deferral_payments', 'total_payments', 'loan_advances', 'bonus', 'restricted_stock_deferred', 'deferred_income', 'total_stock_value', 'expenses', 'exercised_stock_options', 'other', 'long_term_incentive', 'restricted_stock', 'director_fees'] (all units are in US dollars) 
  
-email features: ['to_messages', 'email_address', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi'] (units are generally number of emails messages; notable exception is ‘email_address’, which is a text string) 
+**email features:**
+
+['to_messages', 'email_address', 'from_poi_to_this_person', 'from_messages', 'from_this_person_to_poi', 'shared_receipt_with_poi'] (units are generally number of emails messages; notable exception is ‘email_address’, which is a text string) 
  
-POI label: [‘poi’] (boolean, represented as integer) 
+**POI label:**
+
+[‘poi’] (boolean, represented as integer) 
+ 
  
 Persons of interest may email each other more frequently then others not involved with the scandal.  Machine learning can be used to find evidence of correlation between POI and the features. 
 
@@ -60,7 +68,9 @@ Also, looking at names/keys that have NaN above a threshold percentage as values
  
 # Updated Features
  
- It stands to reason that emails sent to and from POIs may be an indicator of the person sending or receiving is also a POI.  The raw number of such emails doesn’t give away much without a comparison.  Two new features were created for proportions of emails sent/received to/from POI to total emails sent received to/from that person: “prop_email_to_poi”, and  “prop_email_from_poi”. 
+It stands to reason that emails sent to and from POIs may be an indicator of the person sending or receiving is also a POI.  The raw number of such emails doesn’t give away much without a comparison.  Two new features were created for proportions of emails sent/received to/from POI to total emails sent received to/from that person: 
+
+“prop_email_to_poi”, and  “prop_email_from_poi”. 
  
 These new features were used along with the rest in the SelectKBest selection tool.  The top 5 highest scoring features are listed in the table below.  Of note: the “prop_email_to_poi” feature is the 5th highest scoring feature. 
  
