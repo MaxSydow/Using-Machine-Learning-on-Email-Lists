@@ -25,11 +25,14 @@ poi_id.py
     5. GridSearch used on SVC model to optimize parameters
    
 
-The following are saved, pickled files for the original modified dataset, classifiers, and feature lists
+The following are saved, pickled files for the original modified dataset, classifiers, and feature lists:
 
-my_dataset.pkl
-my_classifier.pkl
-my_feature_list.pkl
+&nbsp; &nbsp; &nbsp; &nbsp; my_dataset.pkl
+
+&nbsp; &nbsp; &nbsp; &nbsp; my_classifier.pkl
+
+&nbsp; &nbsp; &nbsp; &nbsp; my_feature_list.pkl
+
 
 # Features
  
