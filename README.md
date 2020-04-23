@@ -4,10 +4,10 @@ In 2001 the Enron Corporation filed for bankruptcy after it was found that sever
 
 The Enron email list data set has been used widely over the years, and can be accessed via multiple ways.  The raw data can be found from: https://www.cs.cmu.edu/~enron/, then downloading the May 7, 2015 version as a tgz file.  For this project it was preprocessed in the form of a data dictionary using Python 2.7.  It was obtained from Udacity's repository for their machine learning course:
 
-https://github.com/udacity/ud120-projects.git
+https://github.com/udacity/ud120-projects.git 
 
-<pre>
-### Program files
+
+### Program files ###
 
 final_project_dataset.pkl    
 &nbsp; &nbsp; &nbsp; &nbsp; cloned data set
@@ -114,4 +114,4 @@ https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 https://scikit-learn.org/stable/modules/cross_validation.html 
 https://github.com/falodunos/intro-to-machine-learning-udacity-final-project 
 
-</pre> 
+
