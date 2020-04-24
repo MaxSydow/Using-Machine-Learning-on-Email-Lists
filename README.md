@@ -22,7 +22,7 @@ poi_id.py
     2. Identify and remove outliers
     3. Use K-best features to identify features most indicative of POI
     4. Initialize classifiers: GuassianNB, SVC, DecisionTree, and AdaBoost were tried 
-    &nbsp; &nbsp; &nbsp; &nbsp; - SVC provided the highest accuracy
+    ..* SVC provided the highest accuracy
     5. GridSearch used on SVC model to optimize parameters
    
 
