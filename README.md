@@ -81,13 +81,9 @@ These new features were used along with the rest in the SelectKBest selection to
 | Feature                | Score |
 | ---------------------- |:-----:|
 | exercised_stock_options| 24.82 |
-| ---------------------- |:-----:|
 | total_stock_value      | 24.18 |
-| ---------------------- |:-----:|
 | bonus                  | 20.79 |
-| ---------------------- |:-----:|
 | salary                 | 18.29 |
-| ---------------------- |:-----:|
 | prop_email_to_poi      | 16.41 |
 
 
