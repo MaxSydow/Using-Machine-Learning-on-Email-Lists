@@ -76,7 +76,21 @@ It stands to reason that emails sent to and from POIs may be an indicator of the
 “prop_email_to_poi”, and  “prop_email_from_poi”. 
  
 These new features were used along with the rest in the SelectKBest selection tool.  The top 5 highest scoring features are listed in the table below.  Of note: the “prop_email_to_poi” feature is the 5th highest scoring feature. 
- 
+
+
+| Feature                | Score |
+| ---------------------- |:-----:|
+| exercised_stock_options| 24.82 |
+| ---------------------- |:-----:|
+| total_stock_value      | 24.18 |
+| ---------------------- |:-----:|
+| bonus                  | 20.79 |
+| ---------------------- |:-----:|
+| salary                 | 18.29 |
+| ---------------------- |:-----:|
+| prop_email_to_poi      | 16.41 |
+
+
 Feature Score exercised_stock_options 24.82 total_stock_value 24.18 bonus 20.79 salary 18.29 prop_email_to_poi 16.41 
 
 # Algorithms
