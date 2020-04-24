@@ -21,7 +21,8 @@ poi_id.py
     1. Select list of features, and update dictionary
     2. Identify and remove outliers
     3. Use K-best features to identify features most indicative of POI
-    4. Initialize classifiers: GuassianNB, SVC, DecisionTree, and AdaBoost were tried - SVC provided the highest accuracy
+    4. Initialize classifiers: GuassianNB, SVC, DecisionTree, and AdaBoost were tried 
+    &nbsp; &nbsp; &nbsp; &nbsp; - SVC provided the highest accuracy
     5. GridSearch used on SVC model to optimize parameters
    
 
@@ -58,11 +59,12 @@ Persons of interest may email each other more frequently then others not involve
 
 Reading through the dictionary keys I found one entry that doesn’t look like a name.  I removed ‘THE TRAVEL AGENCY IN THE PARK’ from this list of keys.   Plotting Bonus vs Salary, we see one outlier in the upper right corner.  Running some code to loop through these 2 features reveals that the name corresponding to this point is ‘TOTAL’.  There’s no sense in keeping this point for totals in the data set. 
 
-![outliers_1](C:\Users\maxgs\OneDrive\Pictures\outliers_1.png)
+![outliers_1](https://user-images.githubusercontent.com/56166497/80233098-93cac580-861b-11ea-8782-8c20958d8712.png)
 
 Bonus vs. Salary before removing outlier. 
  
- 
+![outliers_2](https://user-images.githubusercontent.com/56166497/80233941-e8bb0b80-861c-11ea-83e8-9ebd69ad6be6.png)
+
 Bonus vs. Salary after removing outlier. 
  
  
