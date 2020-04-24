@@ -93,8 +93,12 @@ Feature Score exercised_stock_options 24.82 total_stock_value 24.18 bonus 20.79 
 
 Default parameters were tried for each of the 4 algroithms used: Gaussian NB (Naïve Bayes), SVC (Support Vector Classification), Decision Tree, and AdaBoost.  My ‘features_used’ were of the form [[‘poi’ , ‘feature’], where ‘feature’ is one of the 5 individual features above.  To help choose which algorithm to focus on the accuracy was tabulated with and without scaling for each feature in each algorithm.  The scaling used was the MinMaxScaler, which is the ratio of the distance of each value from the minimum to the range of values.   
 Feature Summary by Algorithm 
-Naive Bayes 
-Accuracy Bonus Exercised_stock_options Prop_email_to_poi Salary Total_stock_value Avg Scaled .848 .951 .852 .763 .84 .851 Not Scaled .848 .951 .852 .763 .84 .851 
+
+**Naive Bayes** 
+| Accuracy   | Bonus | Exercised_stock_options | Prop_email_to_poi | Salary | Total_stock_value | Avg  |
+| ---------- |:-----:|:-----------------------:|:-----------------:|:------:|:-----------------:|:----:|
+| Scaled     | .848  | .951                    | .852              | .763   | .84               | .851 |
+| Not Scaled | .848  | .951                    |.852               | .763   | .84               | .851 |
  
 SVC 
 Accuracy Bonus Exercised_stock_options Prop_email_to_poi Salary Total_stock_value Avg Scaled .848 .902 .852 .737 .78 .824 Not Scaled .697 .878 .852 .737 .76 .781 
