@@ -142,6 +142,7 @@ Validation refers to how accurate a model can make predictions on a testing data
 Overfitting is a common pitfall with validation.  The extreme case is when the training and testing sets are the same – of course the same predictions will occur, but it’s as if you’re not really making a prediction at all.  Another case is when an algorithm is too sensitive to small changes in the training set.  Small changes generally should be attributed to noise, but the excess sensitivity in the model will look for similar patterns in the testing set when they probably should be ignored.   
 Adjusting the size of training and testing sets can lead to a balance model that avoids overfitting and maximizes performance.  I started with a test size of 0.4, since that was used in the course mini projects.   The accuracies for different test size proportions are summarized below: 
 
+| --------- |:-----:|:-----:|:-----:|:-----:|:------:|:----:|:----:|:-----:|
 | Test Size | 0.1   | 0.2   | 0.3   | 0.4   | 0.5   | 0.6   | 0.7  | 0.8   |
 | Accuracty | 0.909 | 0.905 | 0.968 | 0.927 | 0.882 | 0.852 | 0.901| 0.901 |
 
