@@ -1,3 +1,5 @@
+# Using Machine Learning to Identify Persons of Interests from Enron Emails #
+
 # About #
 
 In 2001 the Enron Corporation filed for bankruptcy after it was found that several executives were involved with fraudulent financial activities.   After a federal investigation data on these executives were made public, including emails, and salary and bonus amounts.  Persons of interest in the investigation, POIs, are identified in the features of email data sets examined in this project. 
@@ -95,20 +97,32 @@ Default parameters were tried for each of the 4 algroithms used: Gaussian NB (Na
 Feature Summary by Algorithm 
 
 **Naive Bayes** 
-| Accuracy   | Bonus | Exercised_stock_options | Prop_email_to_poi | Salary | Total_stock_value | Avg  |
-| ---------- |:-----:|:-----------------------:|:-----------------:|:------:|:-----------------:|:----:|
-| Scaled     | .848  | .951                    | .852              | .763   | .84               | .851 |
-| Not Scaled | .848  | .951                    |.852               | .763   | .84               | .851 |
+| Accuracy   | Bonus | Exercised_stock_options | Prop_email_to_poi | Salary | Total_stock_value | Avg   |
+| ---------- |:-----:|:-----------------------:|:-----------------:|:------:|:-----------------:|:-----:|
+| Scaled     | 0.84  | 0.951                   | 0.852             | 0.763  | 0.84              | 0.851 |
+| Not Scaled | 0.848 | 0.951                   | 0.852             | 0.763  | 0.84              | 0.851 |
  
-SVC 
-Accuracy Bonus Exercised_stock_options Prop_email_to_poi Salary Total_stock_value Avg Scaled .848 .902 .852 .737 .78 .824 Not Scaled .697 .878 .852 .737 .76 .781 
+**SVC** 
+| Accuracy   | Bonus | Exercised_stock_options | Prop_email_to_poi | Salary | Total_stock_value | Avg   |
+| ---------- |:-----:|:-----------------------:|:-----------------:|:------:|:-----------------:|:-----:|
+| Scaled     | 0.848 | 0.902                   | 0.852             | 0.737  | 0.78              | 0.824 |
+| Not Scaled | 0.697 | 0.878                   | 0.852             | 0.737  | 0.76              | 0.781 |
+
  
  
-Decision Tree 
-Accuracy Bonus Exercised_stock_options Prop_email_to_poi Salary Total_stock_value Avg Scaled .788 .854 .667 .763 .72 .758 Not Scaled .788 .854 .667 .763 .72 .758 
+**Decision Tree** 
+| Accuracy   | Bonus | Exercised_stock_options | Prop_email_to_poi | Salary | Total_stock_value | Avg   |
+| ---------- |:-----:|:-----------------------:|:-----------------:|:------:|:-----------------:|:-----:|
+| Scaled     | 0.788 | 0.854                   | 0.667             | 0.763  | 0.72              | 0.758 |
+| Not Scaled | 0.788 | 0.854                   | 0.667             | 0.763  | 0.72              | 0.758 |
+
  
-AdaBoost 
-Accuracy Bonus Exercised_stock_options Prop_email_to_poi Salary Total_stock_value Avg Scaled .788 .854 .667 .763 .72 .758 Not Scaled .788 .854 .667 .763 .72 .758 
+**AdaBoost** 
+| Accuracy   | Bonus | Exercised_stock_options | Prop_email_to_poi | Salary | Total_stock_value | Avg   |
+| ---------- |:-----:|:-----------------------:|:-----------------:|:------:|:-----------------:|:-----:|
+| Scaled     | 0.788 | 0.854                   | 0.667             | 0.763  | 0.72              | 0.758 |
+| Not Scaled | 0.788 | 0.854                   | 0.667             | 0.763  | 0.72              | 0.758 |
+
  
 The GaussianNB algorithm has the highest average metrics for all features used.  It is clear to see that ‘excercised_stock_options’ has the highest accuracy feature in all algorithms used.  The only algorithm affected by scaling was SVC, and I chose to focus on it for reasons that will be explained in the next section.  
  
@@ -127,8 +141,10 @@ A better accuracy of 0.927 was obtained.
 Validation refers to how accurate a model can make predictions on a testing data set based on its performance on a training set.  One thing to be wary of is making sure that training and testing data sets don’t contain patterns that could distinguish them.  For example, if there is a pattern in the training set it would be applied to the testing set, but if no such pattern exists in the testing set then those points wouldn’t be classified well.  The data should be randomized to avoid this.   
 Overfitting is a common pitfall with validation.  The extreme case is when the training and testing sets are the same – of course the same predictions will occur, but it’s as if you’re not really making a prediction at all.  Another case is when an algorithm is too sensitive to small changes in the training set.  Small changes generally should be attributed to noise, but the excess sensitivity in the model will look for similar patterns in the testing set when they probably should be ignored.   
 Adjusting the size of training and testing sets can lead to a balance model that avoids overfitting and maximizes performance.  I started with a test size of 0.4, since that was used in the course mini projects.   The accuracies for different test size proportions are summarized below: 
- 
-test size 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 accuracy .909 .905 .968 .927 .882 .852 .901 .901 
+
+| Test Size | 0.1   | 0.2   | 0.3   | 0.4   | 0.5   | 0.6   | 0.7  | 0.8   |
+| Accuracty | 0.909 | 0.905 | 0.968 | 0.927 | 0.882 | 0.852 | 0.901| 0.901 |
+
  
 Here we see that accuracy increases as testing set proportion increases, then peaks at 0.3, but starts to increase again after 0.6.  This increase where over half the data set is being used for testing is where overfitting starts to take hold.  Using 3/10 of the data for testing gives the best accuracy.   
 A better method is K-fold Cross Validation which partitions the testing and training sets into k number of folds.  It is better, because it iterates over all data using different partitions of the same size for training and testing.  For example, a 3-fold validation starts with 2/3 of the data used for training, and the remaining 1/3 for testing.  The next iteration uses another partition of 2/3 of the data for testing and so forth for 3 iterations.  Validation scores for each iteration can be found using the cross_val_score function.  Using 3 folds, I obtained an average accuracy of 0.88. 
@@ -143,7 +159,9 @@ The SVC algorithm using grid search yielded a precision of 1.0.  This means that
 # Sources
  
 https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html 
+
 https://scikit-learn.org/stable/modules/cross_validation.html 
+
 https://github.com/falodunos/intro-to-machine-learning-udacity-final-project 
 
 
