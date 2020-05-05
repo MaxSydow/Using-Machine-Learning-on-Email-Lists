@@ -9,10 +9,20 @@ The Enron email list data set has been used widely over the years, and can be ac
 https://github.com/udacity/ud120-projects.git 
 
 
+
 # Program files
+
 
 final_project_dataset.pkl    
 &nbsp; &nbsp; &nbsp; &nbsp; cloned data set
+
+The following are pickled files used for updated original data set, and classifier data and features.
+
+my_dataset.pkl
+
+my_classifier.pkl
+
+my_feature_list.pkl
 
 poi_id.py
 
