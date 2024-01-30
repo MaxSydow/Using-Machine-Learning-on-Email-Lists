@@ -80,7 +80,7 @@ It stands to reason that emails sent to and from POIs may be an indicator of the
 
 “prop_email_to_poi”, and  “prop_email_from_poi”. 
  
-These new features were used along with the rest in the SelectKBest selection tool.  The top 5 highest scoring features are listed in the table below.  Of note: the “prop_email_to_poi” feature is the 5th highest scoring feature. 
+These new features were used along with the rest in the SelectKBest selection tool.  The 'f_classif' score function was used, meaning that ANOVA F-statistics were used to measure significance.  The top 5 highest scoring features are listed in the table below.  Of note: the “prop_email_to_poi” feature is the 5th highest scoring feature. 
 
 
 | Feature                | Score |
